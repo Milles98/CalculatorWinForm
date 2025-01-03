@@ -133,7 +133,7 @@
             this.btnDivide.TabIndex = 7;
             this.btnDivide.Text = "/";
             this.btnDivide.UseVisualStyleBackColor = true;
-            this.btnDivide.Click += new System.EventHandler(this.btnDivide_Click);
+            this.btnDivide.Click += new System.EventHandler(this.operator_Click);
             // 
             // btn7
             // 
@@ -177,7 +177,7 @@
             this.btnMultiply.TabIndex = 11;
             this.btnMultiply.Text = "X";
             this.btnMultiply.UseVisualStyleBackColor = true;
-            this.btnMultiply.Click += new System.EventHandler(this.btnMultiply_Click);
+            this.btnMultiply.Click += new System.EventHandler(this.operator_Click);
             // 
             // btn4
             // 
@@ -221,7 +221,7 @@
             this.btnSubtract.TabIndex = 15;
             this.btnSubtract.Text = "-";
             this.btnSubtract.UseVisualStyleBackColor = true;
-            this.btnSubtract.Click += new System.EventHandler(this.btnSubtract_Click);
+            this.btnSubtract.Click += new System.EventHandler(this.operator_Click);
             // 
             // btn1
             // 
@@ -265,7 +265,7 @@
             this.btnAdd.TabIndex = 19;
             this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.operator_Click);
             // 
             // btnEquals
             // 
@@ -353,7 +353,7 @@
             this.btnPercent.TabIndex = 24;
             this.btnPercent.Text = "%";
             this.btnPercent.UseVisualStyleBackColor = true;
-            this.btnPercent.Click += new System.EventHandler(this.btnPercent_Click);
+            this.btnPercent.Click += new System.EventHandler(this.operator_Click);
             // 
             // Form1
             // 

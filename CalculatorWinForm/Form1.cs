@@ -31,9 +31,25 @@ namespace CalculatorWinForm
             resultTextBox.Text += button.Text;
         }
 
-        private void btnPercent_Click(object sender, EventArgs e)
+        // Hanterar operatorer (+, -, *, /)
+        private void operator_Click(object sender, EventArgs e)
         {
+            Button button = (Button)sender;
 
+            if (result != 0)
+            {
+                btnEquals.PerformClick();
+                currentOperation = button.Text;
+                secondTextBox.Text = result + " " + currentOperation;
+                isOperationPerformed = true;
+            }
+            else
+            {
+                currentOperation = button.Text;
+                result = Double.Parse(resultTextBox.Text);
+                secondTextBox.Text = result + " " + currentOperation;
+                isOperationPerformed = true;
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -47,26 +63,6 @@ namespace CalculatorWinForm
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnDivide_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnMultiply_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSubtract_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
         {
 
         }
