@@ -52,19 +52,28 @@ namespace CalculatorWinForm
             }
         }
 
+        // Rensar hela textfältet (C)
         private void btnClear_Click(object sender, EventArgs e)
         {
-
+            resultTextBox.Text = "0";
+            result = 0;
+            secondTextBox.Text = "";
+            currentOperation = "";
         }
 
+        // Kvadratrot (√)
         private void btnClearOne_Click(object sender, EventArgs e)
         {
-
+            resultTextBox.Text = Math.Sqrt(Double.Parse(resultTextBox.Text)).ToString();
         }
 
+        // Tar bort senaste siffran (<-)
         private void btnRemove_Click(object sender, EventArgs e)
         {
-
+            if (resultTextBox.Text.Length > 0)
+                resultTextBox.Text = resultTextBox.Text.Remove(resultTextBox.Text.Length - 1);
+            if (resultTextBox.Text == "")
+                resultTextBox.Text = "0";
         }
 
         private void btnEquals_Click(object sender, EventArgs e)
@@ -77,9 +86,16 @@ namespace CalculatorWinForm
 
         }
 
+        // Växlar tecken (+/-)
         private void button20_Click(object sender, EventArgs e)
         {
-
+            if (resultTextBox.Text != "0")
+                resultTextBox.Text = (-1 * Double.Parse(resultTextBox.Text)).ToString();
+        }
+        // Hanterar procent
+        private void btnPercent_Click(object sender, EventArgs e)
+        {
+            resultTextBox.Text = (Double.Parse(resultTextBox.Text) / 100).ToString();
         }
 
         private void firstTextBox_TextChanged(object sender, EventArgs e)
@@ -101,5 +117,6 @@ namespace CalculatorWinForm
         {
 
         }
+
     }
 }

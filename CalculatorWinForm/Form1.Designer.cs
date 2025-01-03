@@ -353,7 +353,7 @@
             this.btnPercent.TabIndex = 24;
             this.btnPercent.Text = "%";
             this.btnPercent.UseVisualStyleBackColor = true;
-            this.btnPercent.Click += new System.EventHandler(this.operator_Click);
+            this.btnPercent.Click += new System.EventHandler(this.btnPercent_Click);
             // 
             // Form1
             // 
