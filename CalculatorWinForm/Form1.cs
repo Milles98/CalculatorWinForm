@@ -20,6 +20,17 @@ namespace CalculatorWinForm
             InitializeComponent();
         }
 
+        // Hanterar sifferknappar
+        private void btn_Click(object sender, EventArgs e)
+        {
+            if ((resultTextBox.Text == "0") || isOperationPerformed)
+                resultTextBox.Clear();
+
+            isOperationPerformed = false;
+            Button button = (Button)sender;
+            resultTextBox.Text += button.Text;
+        }
+
         private void btnPercent_Click(object sender, EventArgs e)
         {
 
@@ -70,57 +81,7 @@ namespace CalculatorWinForm
 
         }
 
-        private void btn0_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn9_Click(object sender, EventArgs e)
         {
 
         }
