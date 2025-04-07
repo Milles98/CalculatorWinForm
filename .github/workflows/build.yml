@@ -1,0 +1,8 @@
+name: CI Build and Test
+on: [push, pull_request]
+jobs:
+  call-build-template:
+    uses: ./.github/workflows/build-template.yml # Eller path till centralt repo
+    with:
+      project-path: 'src/MyProject.csproj'
+    secrets: inherit # Eller specifika secrets
