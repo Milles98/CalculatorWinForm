@@ -1,0 +1,24 @@
+name: Reusable Build Template
+on:
+  workflow_call:
+    inputs:
+      project-path: { required: true, type: string }
+    secrets:
+      SONAR_TOKEN: { required: true }
+      ARTIFACTORY_USER: { required: true }
+      ARTIFACTORY_PASS: { required: true }
+jobs:
+  build:
+    runs-on: self-hosted-runner # Specifik runner
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with: { dotnet-version: '6.0.x' } # Exempel
+      - name: Restore dependencies
+      - name: Build
+      - name: Test
+      - name: SonarQube Scan
+        # ... steps för SonarQube ...
+      - name: Publish to Artifactory
+        # ... steps för JFrog CLI/Action ...
